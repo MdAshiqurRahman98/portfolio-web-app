@@ -68,7 +68,7 @@ const Login = () => {
     return (
         <div>
             <Helmet>
-                <title>Login | BlogHub</title>
+                <title>Login | TaskFlow</title>
             </Helmet>
             <h2 className="text-3xl my-10 text-center">Please Login</h2>
             <form onSubmit={handleLogin} className=" md:w-3/4 lg:w-1/2 mx-auto">
@@ -94,7 +94,7 @@ const Login = () => {
                     </label>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn text-white bg-orange-500 hover:bg-orange-500 text-base normal-case">Login</button>
+                    <button className="btn text-white bg-teal-500 hover:bg-teal-500 text-base normal-case">Login</button>
                 </div>
             </form>
             {
@@ -103,7 +103,7 @@ const Login = () => {
             {
                 success && <p className="text-green-700">{success}</p>
             }
-            <p className="text-center mt-4">Don`t have an account? <Link className="text-orange-500 font-bold" to="/register">Register</Link></p>
+            <p className="text-center mt-4">Don`t have an account? <Link className="text-teal-500 font-bold" to="/register">Register</Link></p>
             <p className="text-center mt-5 mb-7">--------- OR ---------</p>
             <p className="text-center mb-11"><button onClick={handleGoogleSignIn} className="btn btn-wide btn-outline rounded-3xl normal-case text-base hover:bg-white hover:text-black"><FcGoogle className="w-5 h-5 mt-1"></FcGoogle>Login with Google</button></p>
         </div>

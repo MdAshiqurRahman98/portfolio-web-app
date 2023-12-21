@@ -84,7 +84,7 @@ const Register = () => {
     return (
         <div>
             <Helmet>
-                <title>Register | BlogHub</title>
+                <title>Register | TaskFlow</title>
             </Helmet>
             <h2 className="text-3xl my-10 text-center">Please Register</h2>
             <form onSubmit={handleRegister} className=" md:w-3/4 lg:w-1/2 mx-auto">
@@ -122,7 +122,7 @@ const Register = () => {
                     </label>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn text-white bg-orange-500 hover:bg-orange-500 text-base normal-case">Register</button>
+                    <button className="btn text-white bg-teal-500 hover:bg-teal-500 text-base normal-case">Register</button>
                 </div>
             </form>
             {
@@ -131,7 +131,7 @@ const Register = () => {
             {
                 success && <p className="text-green-700">{success}</p>
             }
-            <p className="text-center mt-4">Already have an account? <Link className="text-orange-500 font-bold" to="/login">Login</Link></p>
+            <p className="text-center mt-4">Already have an account? <Link className="text-teal-500 font-bold" to="/login">Login</Link></p>
             <p className="text-center mt-5 mb-7">--------- OR ---------</p>
             <p className="text-center mb-11"><button onClick={handleGoogleSignUp} className="btn btn-wide btn-outline rounded-3xl normal-case text-base hover:bg-white hover:text-black"><FcGoogle className="w-5 h-5 mt-1"></FcGoogle>Register with Google</button></p>
         </div>
