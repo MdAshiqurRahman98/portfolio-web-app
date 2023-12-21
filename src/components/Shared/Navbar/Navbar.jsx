@@ -50,7 +50,7 @@ const Navbar = () => {
 
                 <figure className="hidden md:contents"><img className="w-[30px] h-[30px] mt-1" src="https://i.ibb.co/1TSyryC/Task-management-logo.webp" alt="Logo" /><span className="text-3xl font-bold text-teal-500 ml-3">TaskFlow</span></figure>
 
-                <ul className="hidden lg:flex gap-11 flex-1 items-center justify-start lg:ml-72">
+                <ul className="hidden lg:flex gap-11 flex-1 items-center justify-start lg:ml-[275px]">
                     <li className="text-lg">
                         <NavLink
                             to="/"
