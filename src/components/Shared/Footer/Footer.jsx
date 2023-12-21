@@ -1,11 +1,16 @@
-
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
     return (
         <footer className="footer p-10 text-white">
-            <aside className="mt-7">
+            <aside className="mt-3">
                 <figure><img className="w-[30px] h-[30px]" src="https://i.ibb.co/1TSyryC/Task-management-logo.webp" alt="Logo" /></figure>
                 <p>TaskFlow<br />Copyright &copy; {new Date().getUTCFullYear()} TaskFlow | All rights reserved.</p>
+                <div className="flex gap-3 mt-1">
+                    <FaFacebookF className="text-lg" />
+                    <FaLinkedinIn className="text-lg" />
+                    <FaYoutube className="text-lg" />
+                </div>
             </aside>
             <nav>
                 <header className="footer-title">Benefited Persons</header>

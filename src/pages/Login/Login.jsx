@@ -44,7 +44,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 setSuccess('User Logged in Successfully');
-                navigate(location?.state ? location.state : '/', { replace: true });
+                navigate('/dashboard/user-home', { replace: true });
             })
             .catch(error => {
                 console.error(error);
@@ -57,7 +57,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 setSuccess('User Logged in Successfully');
-                navigate(location?.state ? location.state : '/', { replace: true });
+                navigate('/dashboard/user-home', { replace: true });
             })
             .catch(error => {
                 console.error(error);
