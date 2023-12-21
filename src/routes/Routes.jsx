@@ -5,6 +5,9 @@ import Home from '../pages/Home/Home/Home';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import AboutUs from '../pages/AboutUs/AboutUs';
+import Dashboard from '../layouts/Dashboard';
+import PrivateRoute from './PrivateRoute';
+import UserHome from '../pages/UserDashboard/UserHome/UserHome';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +33,17 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: 'dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
+            {
+                path: 'user-home',
+                element: <UserHome></UserHome>
+            }
+        ]
+    }
 ]);
 
 export default router;
