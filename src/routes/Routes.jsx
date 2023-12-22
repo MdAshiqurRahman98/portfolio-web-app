@@ -10,6 +10,7 @@ import PrivateRoute from './PrivateRoute';
 import UserHome from '../pages/UserDashboard/UserHome/UserHome';
 import AddTask from '../pages/UserDashboard/AddTask/AddTask';
 import UpdateTask from '../pages/UserDashboard/UpdateTask/UpdateTask';
+import UserProfile from '../pages/UserDashboard/UserProfile/UserProfile';
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
                 path: 'update-task/:id',
                 element: <UpdateTask></UpdateTask>,
                 loader: ({ params }) => fetch(`http://localhost:5000/api/v1/task/${params.id}`)
+            },
+            {
+                path: 'user-profile',
+                element: <UserProfile></UserProfile>
             }
         ]
     }
