@@ -39,6 +39,40 @@ const UserHome = () => {
         })
     }
 
+    const handleOngoing = _id => {
+        axiosSecure.patch(`/api/v1/task/status-ongoing/${_id}`)
+            .then(res => {
+                console.log(res.data)
+                if (res.data.modifiedCount > 0) {
+                    refetch();
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: `Task Ongoing`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+    }
+
+    const handleCompleted = _id => {
+        axiosSecure.patch(`/api/v1/task/status-completed/${_id}`)
+            .then(res => {
+                console.log(res.data)
+                if (res.data.modifiedCount > 0) {
+                    refetch();
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: `Task Completed`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+    }
+
     return (
         <>
             <Helmet>
@@ -78,7 +112,39 @@ const UserHome = () => {
                                     </td>
                                 </tr>)
                             }
+                        </tbody>
+                    </table>
+                </div>
 
+                <h3 className="text-3xl font-bold text-center mt-14 mb-9">To-Do List</h3>
+                <div className="overflow-x-auto">
+                    <table className="table table-zebra w-full">
+                        {/* head */}
+                        <thead>
+                            <tr className="text-base">
+                                <th>Title</th>
+                                <th>Status</th>
+                                <th>Update Status</th>
+                                <th>Update Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                tasks.map((task) => <tr key={task._id}>
+                                    <th>{task.title}</th>
+                                    <td>{task.status}</td>
+                                    <td>
+                                        {
+                                            task.status === 'ongoing' ? 'Task Ongoing' : task.status === 'completed' ? 'Task Completed' : <button onClick={() => handleOngoing(task._id)} className="btn btn-sm normal-case text-white bg-teal-500 hover:bg-teal-500">Click here</button>
+                                        }
+                                    </td>
+                                    <td>
+                                        {
+                                            task.status === 'completed' ? 'Task Completed' : <button onClick={() => handleCompleted(task._id)} disabled={task.status === 'to-do'} className="btn btn-sm normal-case text-white bg-teal-500 hover:bg-teal-500">Click here</button>
+                                        }
+                                    </td>
+                                </tr>)
+                            }
                         </tbody>
                     </table>
                 </div>

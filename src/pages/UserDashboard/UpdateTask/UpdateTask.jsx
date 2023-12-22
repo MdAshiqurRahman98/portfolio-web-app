@@ -25,14 +25,14 @@ const UpdateTask = () => {
             deadline: data.deadline,
             priority: data.priority,
             status: 'to-do',
-            email: user.email,
-            timestamp: getCurrentTimestamp()
+            timestamp: getCurrentTimestamp(),
+            email: user.email
         };
 
         console.log(updatedTask);
 
         // Send data to the server
-        axiosSecure.patch(`/api/v1/update-product/${_id}?email=${user?.email}`, updatedTask)
+        axiosSecure.patch(`/api/v1/update-task/${_id}?email=${user?.email}`, updatedTask)
             .then(res => {
                 console.log(res.data);
                 if (res.data.modifiedCount > 0) {
@@ -99,7 +99,7 @@ const UpdateTask = () => {
                             {errors.priority && <span className="text-red-500 text-right">Priority is required</span>}
                         </div>
                     </div>
-                    <input type="submit" value="Add Task" className="btn btn-block text-white bg-teal-500 hover:bg-teal-500 normal-case" />
+                    <input type="submit" value="Update Task" className="btn btn-block text-white bg-teal-500 hover:bg-teal-500 normal-case" />
                 </form>
             </div>
         </>
