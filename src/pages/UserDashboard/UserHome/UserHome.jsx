@@ -76,7 +76,7 @@ const UserHome = () => {
     return (
         <>
             <Helmet>
-                <title>Dashboard | TaskFlow</title>
+                <title>User Home | TaskFlow</title>
             </Helmet>
             <div className="mb-11">
                 <h3 className="text-3xl font-bold text-center mt-14 mb-9">Dashboard</h3>

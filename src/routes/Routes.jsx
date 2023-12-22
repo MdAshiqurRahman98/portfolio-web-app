@@ -52,7 +52,7 @@ const router = createBrowserRouter([
             {
                 path: 'update-task/:id',
                 element: <UpdateTask></UpdateTask>,
-                loader: ({ params }) => fetch(`http://localhost:5000/api/v1/task/${params.id}`)
+                loader: ({ params }) => fetch(`https://task-management-server-ivory-ten.vercel.app/api/v1/task/${params.id}`)
             },
             {
                 path: 'user-profile',

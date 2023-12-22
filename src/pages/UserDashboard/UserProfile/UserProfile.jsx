@@ -7,7 +7,7 @@ const UserProfile = () => {
     return (
         <>
             <Helmet>
-                <title>Profile | TaskFlow</title>
+                <title>User Profile | TaskFlow</title>
             </Helmet>
             <div className="mb-11 text-center">
                 <h3 className="text-3xl font-bold mt-14 mb-16">Your Profile</h3>
