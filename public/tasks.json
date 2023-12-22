@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Design Landing Page",
+        "description": "Create a visually appealing landing page with a suitable banner.",
+        "deadline": "2023-06-30",
+        "priority": "high",
+        "status": "todo",
+        "userId": "user123"
+    },
+    {
+        "title": "Implement User Authentication",
+        "description": "Set up user authentication using Firebase and Google sign-in.",
+        "deadline": "2023-07-15",
+        "priority": "moderate",
+        "status": "ongoing",
+        "userId": "user456"
+    },
+    {
+        "title": "Drag-and-Drop Functionality",
+        "description": "Implement drag-and-drop functionality for task management.",
+        "deadline": "2023-08-01",
+        "priority": "low",
+        "status": "completed",
+        "userId": "user789"
+    },
+    {
+        "title": "Add Toast Notifications",
+        "description": "Implement toast notifications for task assignments, updates, and deadlines.",
+        "deadline": "2023-08-10",
+        "priority": "high",
+        "status": "todo",
+        "userId": "user123"
+    },
+    {
+        "title": "Write Backend API for Tasks",
+        "description": "Develop Express.js API endpoints for managing tasks on the backend.",
+        "deadline": "2023-09-01",
+        "priority": "moderate",
+        "status": "todo",
+        "userId": "user456"
+    },
+    {
+        "title": "Deploy Task Management Platform",
+        "description": "Deploy the complete task management platform to a production server.",
+        "deadline": "2023-09-15",
+        "priority": "high",
+        "status": "ongoing",
+        "userId": "user789"
+    }
+]
